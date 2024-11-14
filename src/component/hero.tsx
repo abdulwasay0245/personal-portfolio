@@ -1,8 +1,29 @@
+"use client"
 import React from 'react'
 import styles from "@/app/page.module.css"
 import Image from 'next/image'
+import { useRef, useEffect , useState} from 'react'
 
 const Hero = () => {
+    const imgRef = useRef(null)
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollPosition(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll',
+                handleScroll);
+        };
+    }, []);
+
+
+
+
     return (
       <main className={styles.bg}>
       <div className={styles.hero}>
@@ -14,12 +35,16 @@ const Hero = () => {
           </div>
           <div className={styles.heroLeft}>
               <Image
-                  src="/hero.jpg"
+                  src="/wasay.jpg"
                   alt='s'
                   height={700}
                   width={700}
                   layout='responsive'
-                  className={styles.heroImg}
+                        className={styles.heroImg}
+                        ref={imgRef}
+                        style={{
+                            transform: `translateX(${scrollPosition * 0.15}px)`,
+                        }}
               >
                     
               </Image>

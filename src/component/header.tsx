@@ -15,7 +15,7 @@ const Header = () => {
                   <div className={styles.right}>
                       <nav>
                           <Link href="/"><button className={styles.navbtn}>Home</button></Link>
-                          <Link href="/projects"><button className={styles.navbtn}>Projects</button></Link>
+                          <Link href="/project"><button className={styles.navbtn}>Portfolio</button></Link>
                           <Link href="/about"><button className={styles.navbtn}>About Me</button></Link>
                       </nav>
                       </div>

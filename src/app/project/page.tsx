@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from '@/component/header'
-import Footer from '@/component/footer'
 import Project from '@/component/Project'
+import Footer from '@/component/footer'
 
-const projects = () => {
+const project = () => {
   return (
       <div>
           <Header></Header>
@@ -13,4 +13,4 @@ const projects = () => {
   )
 }
 
-export default projects
+export default project

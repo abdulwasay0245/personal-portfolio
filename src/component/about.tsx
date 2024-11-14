@@ -1,30 +1,34 @@
 import React from 'react'
 import styles from "@/app/page.module.css"
 import Image from 'next/image'
+import Link from 'next/link'
+
 const About = () => {
   return (
-    <main className={styles.bg}>
-      <div className={styles.hero}>
-        <div className={styles.heroLeft}>
-          <Image
-            src="/hero.jpg"
-            alt='s'
-            height={700}
-            width={700}
-            layout='responsive'
-            className={styles.heroImg}
-          >
-
-          </Image>
+   
+    <section id='about'>
+      <div className={styles.aboutGrid}>
+        <div className={styles.heroAbout}><h1 className={styles.aboutHeading}>ABOUT ME</h1></div>
+        <div className={styles.aboutParent}>
+          <div className={styles.aboutDetails}>
+            <div className={styles.aboutPic}></div>
+            <div className={styles.aboutData}>
+              <h2>Hi there , i am Abdul Wasay</h2>
+              <h2>Front-end Developer</h2>
+              <p>A skilled front-end developer specializing in crafting intuitive and visually stunning user interfaces. With a strong foundation in HTML, CSS, and JavaScript, I am passionate about leveraging AI and machine learning to create dynamic and engaging web experiences. I am dedicated to staying up-to-date with the latest trends and technologies to deliver innovative and user-centric solutions.</p>
+              <p>
+                Email : abdulwasay0245@gmail.com
+              </p>
+              <p>Phone : 03152127174</p>
+              <p>From : Karachi Pakistan</p>
+              <p>Language : Urdu English</p>
+              <Link href="/Abdul-Wasay.pdf"><button className={styles.hireMe}>Download Resume</button></Link>
+              
+            </div>
+          </div>
         </div>
-        <div className={styles.heroRight}>
-          <h1 className={styles.first}>Hello I am</h1>
-          <h1 className={styles.second}> Abdul Wasay </h1>
-          <p className={styles.third} id={styles.thirdPara}> As a frontend web developer and a dedicated B.Sc.S student, I am eager to dive into the exciting world of agentic AI systems. With a solid foundation in web development, I believe I can effectively contribute to the development and implementation of these intelligent systems. My skills in HTML, CSS, and JavaScript, coupled with a keen interest in AI, position me well to work efficiently and creatively in this field. I am excited about the potential of agentic AI to revolutionize various industries, and I am eager to be a part of this technological advancement. </p>
-          <button className={styles.hireMe}>Hire Me</button>
-        </div>
-      </div>
-    </main>
+</div>
+    </section>
   )
 }
 

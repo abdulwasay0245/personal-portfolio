@@ -2,8 +2,7 @@ import React from 'react'
 import Header from '@/component/header'
 import Footer from '@/component/footer'
 import About from '@/component/about'
-
-const AboutMe = () => {
+const about = () => {
   return (
       <div>
           <Header></Header>
@@ -13,4 +12,4 @@ const AboutMe = () => {
   )
 }
 
-export default AboutMe
+export default about
